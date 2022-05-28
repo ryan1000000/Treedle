@@ -80,9 +80,9 @@ img {
 }
 
 .key.correct {
-  --hue: 300;
-  --saturation: 47%;
-  --lightness: 40%;
+  --hue: 155;
+  --saturation: 67%;
+  --lightness: 45%;
 }
 
 .guess-grid {
@@ -130,7 +130,7 @@ img {
 
 .tile[data-state="correct"] {
   border: none;
-  background-color: hsl(300, 47%, 40%);
+  background-color: hsl(155, 67%, 45%);
 }
 
 .tile.shake {
