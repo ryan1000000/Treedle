@@ -13292,7 +13292,7 @@ function checkWinLose(guess, tiles) {
   const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
 
   if (remainingTiles.length === 0) { // if no more remaining tiles
-    showAlert("🚨TIMBER!!!🚨")
+    showAlert("🚨Oh no! You better call an ISA certified arborist to deal with this mess!🚨")
     showAlert(`You can always try again, unlike the real Wordle!`, null)
     stopInteraction
   }
