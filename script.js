@@ -13282,8 +13282,9 @@ function shakeTiles(tiles) {
 
 function checkWinLose(guess, tiles) {
   if (guess === targetWord) {
-    showAlert("You found a solution!", 5000)
+    showAlert("Are you an arborist? Good job!", 5000)
     danceTiles(tiles)
+    
     stopInteraction()
     return
   }
@@ -13291,7 +13292,7 @@ function checkWinLose(guess, tiles) {
   const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
 
   if (remainingTiles.length === 0) { // if no more remaining tiles
-    showAlert("🚨YOU FAILED TO PREVENT CLIMATE CHANGE!🚨")
+    showAlert("🚨TIMBER!!!🚨")
     showAlert(`You can always try again, unlike the real Wordle!`, null)
     stopInteraction
   }
@@ -13311,3 +13312,15 @@ function danceTiles(tiles) {
     }, (index * DANCE_ANIMATION_DURATION) / 5)
   })
 }
+
+const shareButton = document.querySelector('.share-button');
+const shareDialog = document.querySelector('.share-dialog');
+const closeButton = document.querySelector('.close-button');
+
+shareButton.addEventListener('click', event => {
+  shareDialog.classList.add('is-open');
+});
+
+closeButton.addEventListener('click', event => {
+  shareDialog.classList.remove('is-open');
+});
