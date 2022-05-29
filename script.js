@@ -1,5 +1,6 @@
 const targetWords = [
   "maple",
+  "taiga",
   "knots",
   "bough",
   "xylem",
@@ -8,6 +9,7 @@ const targetWords = [
   "fruit",
   "twigs",
   "limbs",
+  "rings",
   "crown",
   "plant",
   "shrub",
@@ -18,7 +20,6 @@ const targetWords = [
   "grove",
   "apple",
   "brush",
-  "taiga",
   "holly",
   "roots",
   "larix",
