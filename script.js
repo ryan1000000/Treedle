@@ -13294,7 +13294,7 @@ function checkWinLose(guess, tiles) {
         showAlert("Nicely done. You totally lumberjacked that.", 5000)
     }
     if (remainingTiles.length === 10) {  //quested it in 4
-        showAlert("Your a chainsaw master. Well done.", 5000)
+        showAlert("You're a chainsaw master. Well done.", 5000)
     }
     if (remainingTiles.length === 5) {  //quested it in 5
         showAlert("Not bad, but your pruning skills could use some work.", 5000)
