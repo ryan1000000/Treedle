@@ -13284,19 +13284,19 @@ function shakeTiles(tiles) {
 function checkWinLose(guess, tiles) {
   const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
   if (guess === targetWord) {
-    if (remainingTiles.length === 30) {  //quested it in one
+    if (remainingTiles.length === 25) {  //quested it in one
         showAlert("You are a true Tree Ninja", 5000)
     }
-    if (remainingTiles.length === 24) {  //quested it in 2
+    if (remainingTiles.length === 20) {  //quested it in 2
         showAlert("Are you an arborist? Amazing.", 5000)
     }
-    if (remainingTiles.length === 18) {  //quested it in 3
+    if (remainingTiles.length === 15) {  //quested it in 3
         showAlert("Nicely done. You totally lumberjacked that.", 5000)
     }
-    if (remainingTiles.length === 12) {  //quested it in 4
+    if (remainingTiles.length === 10) {  //quested it in 4
         showAlert("Your a chainsaw master. Well done.", 5000)
     }
-    if (remainingTiles.length === 6) {  //quested it in 5
+    if (remainingTiles.length === 5) {  //quested it in 5
         showAlert("Not bad, but your pruning skills could use some work.", 5000)
     }
     if (remainingTiles.length === 0) {  //quested it in 6
