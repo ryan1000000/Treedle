@@ -13282,17 +13282,35 @@ function shakeTiles(tiles) {
 }
 
 function checkWinLose(guess, tiles) {
+  const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
   if (guess === targetWord) {
-    showAlert("Are you an arborist? Good job!", 5000)
+    if (remainingTiles.length === 30) {  //quested it in one
+        showAlert("You are a true Tree Ninja", 5000)
+    }
+    if (remainingTiles.length === 24) {  //quested it in 2
+        showAlert("Are you an arborist? Amazing.", 5000)
+    }
+    if (remainingTiles.length === 18) {  //quested it in 3
+        showAlert("Nicely done. You totally lumberjacked that.", 5000)
+    }
+    if (remainingTiles.length === 12) {  //quested it in 4
+        showAlert("Your a chainsaw master. Well done.", 5000)
+    }
+    if (remainingTiles.length === 6) {  //quested it in 5
+        showAlert("Not bad, but your pruning skills could use some work.", 5000)
+    }
+    if (remainingTiles.length === 0) {  //quested it in 6
+        showAlert("Yikes, that was close. Have you considered a career in insurance?", 5000)
+    }
     danceTiles(tiles)
     
     stopInteraction()
     return
   }
 
-  const remainingTiles = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
+  const remainingTiless = guessGrid.querySelectorAll(":not([data-letter])") // get all empty tiles
 
-  if (remainingTiles.length === 0) { // if no more remaining tiles
+  if (remainingTiless.length === 0) { // if no more remaining tiles
     showAlert("🚨Oh no! You better call an ISA certified arborist to deal with this mess!🚨")
     showAlert(`You can always try again, unlike the real Wordle!`, null)
     stopInteraction
